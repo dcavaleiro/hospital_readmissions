@@ -1,0 +1,242 @@
+maptonull:
+  - Not available
+  - '?'
+  - Not mapped
+  - Unknown/invalid
+  # Add more expressions to be converted to null here
+
+mapvalues:
+  - name: gender
+    newname: isfemale
+    values:
+      Female: 1
+      Male: 0
+  # Add more dictionaries with names and values here
+  - name: change_in_meds_during_hospitalization
+    values:
+      "Ch": 1
+      "No": 0
+  - name: prescribed_diabetes_meds
+    values:
+      "Yes": 1
+      "No": 0
+
+  # - name: readmitted_binary
+  #   values:
+  #     "No": 0
+  #     "Yes": 1
+  # - name: readmitted_multiclass
+  #   values:
+  #     "No": 0
+  #     "<30 days": 1
+  #     ">30 days": 2
+
+  - name: age
+    newname: agegroup
+    #datatype: int
+    values:
+      "[0-10)": 0
+      "[10-20)": 1
+      "[20-30)": 2
+      "[30-40)": 3
+      "[40-50)": 4
+      "[50-60)": 5
+      "[60-70)": 6
+      "[70-80)": 7
+      "[80-90)": 8
+      "[90-100)": 9
+  - name: race
+    values:
+      Africanamerican: "Afric"
+      Asian: "Asian"
+      Caucasian: "Cauc"
+      Hispanic: "Hisp"
+      Other: "Other"
+
+
+  # - name: race
+  #   values:
+  #     Africanamerican: 1
+  #     Asian: 2
+  #     Caucasian: 3
+  #     Hispanic: 4
+  #     Other: 5
+
+  # - name: admission_type
+  #   values:
+  #     "Emergency": 0
+  #     "Elective": 1
+  #     "Urgent": 2
+  #     "Newborn": 3
+  #     "Trauma center": 4
+
+
+  - name: discharge_disposition
+    values:
+      "Discharged to home": "Home"
+      "Discharged/transferred to home with home health service" : "Home"
+      "Discharged/transferred to home under care of home iv provider" : "Home"
+
+      "Hospice / medical facility" : "Hospice"
+      "Hospice / home" : "Hospice"
+      #"Expired in a medical facility. Medicaid only, hospice." : "Hospice"
+      #"Expired at home. Medicaid only, hospice." : "Hospice"
+      "Discharged/transferred/referred to a psychiatric hospital of psychiatric distinct part unit of a hospital" : "Hospice"
+
+      "Admitted as an inpatient to this hospital" : "Stays"
+      "Still patient or expected to return for outpatient services": "Stays"
+
+      "Discharged/transferred to snf" : "Trf in hospital"
+      "Discharged/transferred within this institution to medicare approved swing bed" : "Trf in hospital"
+      "Discharged/transferred/referred to this institution for outpatient services" : "Trf in hospital"
+    
+      "Discharged/transferred to a federal health care facility." : "Trf out"
+      "Discharged/transferred to another short term hospital" : "Trf out"
+      "Discharged/transferred to icf" : "Trf out"
+      "Discharged/transferred to another hospital for neonatal aftercare" : "Trf out"
+      "Discharged/transferred to a nursing facility certified under medicaid but not certified under medicare." : "Trf out"
+      "Discharged/transferred/referred another institution for outpatient services" : "Trf out"
+      "Discharged/transferred to medicare approved swing bed" : "Trf out"
+      "Discharged/transferred to a long term care hospital." : "Trf out"
+      "Discharged/transferred to another type of inpatient care institution" : "Trf out"
+      "Discharged/transferred to another rehab fac including rehab units of a hospital ." : "Trf out"
+      "Neonate discharged to another hospital for neonatal aftercare" : "Trf out"
+
+      "Left AMA" : "Other"
+      #"Expired" : "Other"
+
+
+  
+  - name: admission_source
+    values:
+      "Emergency Room" : "ER"
+
+      "Clinic referral" : "Healthcare"
+      "Transfer from another health care facility" : "Healthcare"
+      "Physician referral" : "Healthcare"
+      "Transfer from a hospital" : "Healthcare"
+      "HMO referral" : "Healthcare"
+      "Transfer from a skilled nursing facility (snf)" : "Healthcare"
+      "Transfer from hospital inpt/same fac reslt in a sep claim" : "Healthcare"
+      "Transfer from critial access hospital" : "Healthcare"
+      "Transfer from ambulatory surgery center"  : "Healthcare"
+
+      "Normal delivery" : "Other"
+      "Extramural birth" : "Other"
+      "Sick baby" : "Other"
+      
+      "Court/law enforcement" : "Law"
+    
+
+  - name: weight
+    newname: weightgroup
+    values:
+      "[0-25)" : 0
+      "[25-50)" : 1
+      "[50-75)" : 2
+      "[75-100)" : 3
+      "[100-125)" : 4
+      "[125-150)" : 5
+      "[150-175)" : 6
+      "[175-200)" : 7
+      ">200" : 8
+
+
+  - name: payer_code
+    values:
+      "Bc": 0
+      "Ch": 1
+      "Cm": 2
+      "Cp": 3
+      "Dm": 4
+      "Fr": 5
+      "Hm": 6
+      "Mc": 7
+      "Md": 8
+      "Mp": 9
+      "Og": 10
+      "Ot": 11
+      "Po": 12
+      "Si": 13
+      "Sp": 14
+      "Un": 15
+      "Wc": 16
+
+
+  - name: medical_specialty
+    newname: specialty_mappings
+    values:
+      "Pediatrics":                           "Pediatrics"
+      "Pediatrics-endocrinology":             "Pediatrics"
+      "Pediatrics-criticalcare":              "Pediatrics"
+      "Pediatrics-neurology":                 "Pediatrics"
+      "Pediatrics-pulmonology":               "Pediatrics"
+      "Anesthesiology-pediatric":             "Pediatrics"
+      "Pediatrics-emergencymedicine":         "Pediatrics"
+      "Cardiology-pediatric":                 "Pediatrics"
+      "Psychiatry-child/adolescent":          "Pediatrics"
+      "Pediatrics-allergyandimmunology":      "Pediatrics"
+      "Pediatrics-infectiousdiseases":        "Pediatrics"
+      "Pediatrics-hematology-oncology":       "Pediatrics"
+      "Surgery-cardiovascular":               "Surgery"
+      "Surgery-plastic":                      "Surgery"
+      "Surgery-maxillofacial":                "Surgery"
+      "Surgery-general":                      "Surgery"
+      "Surgery-thoracic":                     "Surgery"
+      "Surgery-vascular":                     "Surgery"
+      "Surgery-neuro":                        "Surgery"
+      "Surgery-cardiovascular/thoracic":      "Surgery"
+      "Surgeon":                              "Surgery"
+      "Surgery-colon&rectal":                 "Surgery"
+      "Surgery-pediatric":                    "Surgery"
+      "Obstetricsandgynecology":              "ObGyn"
+      "Gynecology":                           "ObGyn"
+      "Obstetrics":                           "ObGyn"
+      "Obsterics&gynecology-gynecologiconco": "ObGyn"
+      "Cardiology":                           "Cardiology"
+      "Anesthesiology":                       "Anesthesiology"
+      "Internalmedicine":                     "InternalMed"
+      "Neurology":                            "Neurology"
+      "Neurophysiology":                      "Neurology"
+      "Hematology/oncology":                  "Oncology"
+      "Oncology":                             "Oncology"
+      "Orthopedics":                          "Orthopedics"
+      "Orthopedics-reconstructive":           "Orthopedics"
+      "Emergency/trauma":                     "Emergency"
+      "Psychology":                           "Psychology"
+      "Infectiousdiseases":                   "Infectious"
+      "Allergyandimmunology":                 "Immunology"
+      "Rheumatology":                         "Immunology"
+      "Family/generalpractice":               "Family/gen"
+      "Radiologist":                          "Radiology"
+      "Radiology":                            "Radiology"
+      "Endocrinology":                        "Endocrin"
+      "Endocrinology-metabolism":             "Endocrin"
+      "Gastroenterology":                     "Gastro"
+      "Proctology":                           "Gastro"
+
+      "Hospitalist":                          "Other"
+      "Osteopath":                            "Other"
+      "Dcpteam":                              "Other"
+      "Pathology":                            "Other"
+      "Dentistry":                            "Other"
+      "Outreachservices":                     "Other"
+      "Speech":                               "Other"
+      "Resident":                             "Other"
+      "Sportsmedicine":                       "Other"
+      "Dermatology":                          "Other"
+      "Perinatology":                         "Other"
+      "Psychiatry-Addictive":                 "Other"
+      "Surgery-PlasticwithinHeadandNeck":     "Other"
+      "Physiciannotfound":                    "Other"
+
+      "Surgicalspecialty":                    "Surgicalspecialty"
+      "Hematology":                           "Hematology"
+      "Nephrology":                           "Nephrology"
+      "Psychiatry":                           "Psychiatry"
+      "Physicalmedicineandrehabilitation":    "Physmedrehab"
+      "Pulmonology":                          "Pulmonology"
+      "Urology":                              "Urology"
+      "Podiatry":                             "Podiatry"
+      "Ophthalmology":                        "Ophthalmology"
+      "Otolaryngology":                       "Otolaryngology"

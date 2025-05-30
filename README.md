@@ -16,7 +16,8 @@ This project aims to understand and predict hospital readmissions, with the goal
 - **Libraries**:
   - Data Manipulation: `pandas`, `numpy`
   - Data Visualization: `matplotlib`, `seaborn`
-  - Machine Learning: `scikit-learn`
+  - Machine Learning: `scikit-learn`, `imblearn`
+  - Statistical Analysis: `scipy`
   - Others: `yaml`, `warnings`
 - **Environment**: Jupyter Notebook
 
@@ -55,9 +56,12 @@ This project aims to understand and predict hospital readmissions, with the goal
 ## Results and conclusion
 The observed high rates of readmission among patients with cardiovascular diseases, respiratory disorders, and uncontrolled diabetes underscore the importance of targeted interventions and specialized post discharge care for these populations. Nevertheless, the limited preventability of readmissions emphasizes the need for a comprehensive, patient-centric approach that considers 
 factors beyond the hospital's immediate control. 
+
 For the binary classification approach, the best model to deal with this problem was a Random Forest, and in the Kaggle competition we achieved an F1 score of 0.3136. 
+
 For the multiclassification target, the best model is also a Random Forest, with an F1 score of 0.5205. 
+
 It is crucial to acknowledge certain limitations in this study. The data is confined to the United States, potentially impacting the generalizability of findings to regions with different healthcare systems and 
 patient demographics. 
-Future research could explore the effectiveness of targeted interventions and post-discharge care strategies for high-risk patient groups, aiming to reduce readmission rates. Longitudinal studies 
-tracking patients over an extended period would allow for a more in-depth analysis of readmission trends and the efficacy of interventions over time. Addressing these limitations and building on these findings, future research has the potential to further refine healthcare strategies and policies aimed at minimizing hospital readmissions. 
+
+Future research could explore the effectiveness of targeted interventions and post-discharge care strategies for high-risk patient groups, aiming to reduce readmission rates. Longitudinal studies tracking patients over an extended period would allow for a more in-depth analysis of readmission trends and the efficacy of interventions over time. Addressing these limitations and building on these findings, future research has the potential to further refine healthcare strategies and policies aimed at minimizing hospital readmissions. 
